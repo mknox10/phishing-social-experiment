@@ -3,7 +3,7 @@ import './App.css';
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 
-const trackingId = 'G-VPM46C1Z1R';
+const trackingId = 'UA-182178689-1';
 
 function App() {
 
