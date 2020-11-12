@@ -1,7 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import ReactGA from 'react-ga';
-import { useEffect } from 'react';
+
+import './App.css';
+import Phishing from './Components/Phishing';
+import Login from './Components/Login';
 
 const trackingId = 'UA-182178689-1';
 
@@ -13,11 +16,11 @@ function App() {
   }, []);
   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          <h1>Phishing Social Experiment</h1>
-      </header>
+    <div>
+      <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/phishing" component={Phishing} />
+      </Switch>
     </div>
   );
 }
