@@ -14,6 +14,39 @@ code {
 
 button,
 h5,
+p {
+  margin: 1rem 0 1rem 0 !important;
+  display: block !important;
+}
+
+p {
+  font-size: small;
+}
+
+button,
 input {
-  margin: 2px !important;
+  margin: 0 0 1rem 0 !important;
+  width: 100%;
+  display: block !important;
+}
+
+a {
+  margin-left: .25rem;
+}
+
+.card {
+  background-color: Gainsboro !important;
+  width: 75%;
+}
+
+.btn-info {
+  background-color: SteelBlue !important;
+}
+
+.my-footer {
+  color: white;
+}
+
+#NDUS_logo {
+  padding: 10px;
 }
