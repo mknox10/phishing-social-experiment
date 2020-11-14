@@ -1,18 +1,33 @@
 import { Layout} from 'antd';
 import React from 'react';
+import ReactGA from 'react-ga';
 import { useHistory } from 'react-router-dom';
 
 import logo from '../NDUS_Logo.png';
 import '../index.css';
 
 const { Footer } = Layout;
+const trackingId = 'UA-182178689-1';
 
 function Login() {
 
     let history = useHistory();
 
+    const login = () => {
+        history.push('/phishing/');
+        ReactGA.event({
+            category: 'User',
+            action: 'Login',
+        });
+    }
+
     const redirect = () => {
-        history.push('/phishing/')
+        history.push('/phishing/');
+        ReactGA.initialize(trackingId);
+        ReactGA.event({
+            category: 'User',
+            action: 'Help Button',
+        });
     }
 
     return (
@@ -35,7 +50,7 @@ function Login() {
                                      User Agreement
                                 </a>
                             </p>
-                            <button type="button" class="btn btn-light" onClick={redirect}>Log In</button>
+                            <button type="button" class="btn btn-light" onClick={login}>Log In</button>
                             <h4 align="left">Trouble Logging In?</h4>
                             <p align="left">If you are experiencing any difficulties getting logged into the system, please use the links below.</p>
                             <button type="button" class="btn btn-info" onClick={redirect}>NDUS System Status</button>
