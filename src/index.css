@@ -34,9 +34,14 @@ a {
   margin-left: .25rem;
 }
 
+ul {
+  text-align: left;
+}
+
 .card {
   background-color: Gainsboro !important;
   width: 75%;
+  margin: 3rem;
 }
 
 .btn-info {
